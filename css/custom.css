@@ -127,13 +127,13 @@ body {
 }
 
 
-/* Serviços */
+/* Atividades */
 
-.servicos {
+.atividades {
     background-image: url('../img/textura.png');
 }
 
-.servicos .btn-horario {
+.atividades .btn-horario {
     padding-bottom: 20px;
 }
 
