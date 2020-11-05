@@ -1,285 +1,303 @@
-    /* Height 100% */
-    
-    html,
-    body {
-        height: 100%;
+/* Height 100% */
+
+html,
+body {
+    height: 100%;
+}
+
+.bloco {
+    padding-top: 94;
+}
+
+
+/* Colors */
+
+.amarelo-logo {
+    background-color: #FFBB00;
+}
+
+.azul-logo {
+    background-color: #00418B;
+}
+
+
+/* Logo */
+
+.logo_text {
+    font-size: 0;
+    margin: 0;
+}
+
+.logo_img {
+    width: 100px;
+    margin-top: 15px;
+}
+
+
+/* Menu */
+
+.navbar {
+    background-color: transparent;
+    transition: background 0.5s linear;
+    position: center;
+}
+
+.navbar ul a:hover {
+    background-color: transparent;
+    color: #FFBB00;
+}
+
+.nav-color {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background 0.5s linear;
+}
+
+
+/* Home */
+
+.home {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0077ff 0%, #00418B 100%);
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+
+/* Titulo e Paragrafo */
+
+.titulo {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #00418B;
+}
+
+.titulo::after {
+    content: '';
+    display: block;
+    width: 200px;
+    border-top: 1px solid #FFBB00;
+    margin: 15px auto;
+}
+
+.paragrafo {
+    line-height: 2rem;
+}
+
+
+/* Sobre */
+
+.sobre {
+    background-image: url('../img/textura.png');
+}
+
+.sobre p {
+    line-height: 1.8rem;
+    text-align: justify;
+}
+
+.sobre .missao-visao-valores {
+    padding: 20px 0;
+    margin-top: 35px;
+    margin-bottom: 0px;
+}
+
+.sobre .missao-visao-valores .icon {
+    color: #fff;
+}
+
+.sobre .missao-visao-valores h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.sobre .missao-visao-valores p {
+    color: #212121;
+    text-align: center;
+}
+
+
+/* Serviços */
+
+.servicos {
+    background-image: url('../img/textura.png');
+}
+
+.servicos .btn-horario {
+    padding-bottom: 20px;
+}
+
+.semBordaInferior {
+    margin-bottom: 0;
+}
+
+
+/* Recados */
+
+.recados {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0077ff 0%, #00418B 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.recados article p {
+    line-height: 1.8rem;
+}
+
+
+/* Contato */
+
+.contato {
+    background-image: url(../img/textura.png);
+}
+
+.contato .mapa {
+    min-height: 500px;
+}
+
+.contato .azul-logo-text {
+    color: #00418B;
+}
+
+.contato .mapa iframe {
+    width: 100%;
+    min-height: 500px;
+    border: none;
+}
+
+.contato .informacoes {
+    background-color: #FFBB00;
+    min-height: 500px;
+    padding: 30px;
+}
+
+.contato h4 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #00418B;
+}
+
+.contato .formulario {
+    height: 500px;
+    padding: 30px;
+}
+
+
+/* Margrm no Contato */
+
+.margemContato {
+    padding: 24px;
+}
+
+
+/* Rodapé */
+
+.rodape {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0077ff 0%, #00418B 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px o;
+}
+
+
+/* Custom */
+
+nav.nav-extended .nav-wrapper {
+    min-height: 94px;
+}
+
+.navbar-fixed {
+    position: absolute;
+    height: 94px;
+}
+
+nav,
+nav i,
+nav [class^="mdi-"],
+nav [class*="mdi-"],
+nav i.material-icons,
+nav a.buttom-collapse i {
+    height: 94px;
+    line-height: 94px;
+}
+
+.sidenav {
+    background: url(../img/textura.png);
+}
+
+.sidenav li>a {
+    color: #00418B;
+    font-weight: 300;
+}
+
+.tabs {
+    background-color: #212121;
+}
+
+.tabs .tab a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-transition: color .28s ease, background-color .28s ease;
+    transition: color .28s ease, background-color .28s ease;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    background-color: transparent;
+    color: #FFBB00;
+}
+
+.tabs .indicator {
+    background-color: #FFBB00;
+}
+
+
+/*Media*/
+
+@media only screen and (max-width: 480px) {}
+
+@media only screen and (max-width: 601px) {
+    .banner {
+        padding-top: 4.5rem;
     }
-    
-    .bloco {
-        padding-top: 94;
-    }
-    /* Colors */
-    
-    .blue-logo {
-        background-color: #2dc7d0;
-    }
-    /* Logo */
-    
-    .logo_text {
-        font-size: 0;
-        margin: 0;
-    }
-    
-    .logo_img {
-        width: 100px;
-        margin-top: 15px;
-    }
-    /* Menu */
-    
-    .navbar {
-        background-color: transparent;
-        transition: background 0.5s linear;
-    }
-    
-    .navbar ul a:hover {
-        background-color: transparent;
-        color: #2dc7d0;
-    }
-    
-    .nav-color {
-        background-color: rgba(0, 0, 0, 0.7);
-        transition: background 0.5s linear;
-    }
-    /* Home */
-    
-    .home {
-        animation: mudarbg 20s infinite;
-        background-image: url('../img/bg.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
     .banner h2 {
-        font-size: 2.5rem;
-        font-weight: 900;
-        text-transform: uppercase;
+        font-size: 4rem;
     }
-    
-    .banner p {
-        font-size: 1.2rem;
-        line-height: 1.8rem;
+    .container {
+        width: 85%;
     }
-    /* Home - Animation */
-    
-    @keyframes mudarbg {
-        40% {
-            background-image: url('../img/bg2.jpg')
-        }
-        80% {
-            background-image: url('../img/bg3.jpg')
-        }
-        100% {
-            background-image: url('../img/bg3.jpg')
-        }
+}
+
+@media only screen and (min-width: 993px) {
+    .banner {
+        padding-top: 5rem;
     }
-    /* Titulo e Paragrafo */
-    
-    .titulo {
-        font-size: 2rem;
-        text-transform: uppercase;
+    .banner h2 {
+        font-size: 5rem;
     }
-    
-    .titulo::after {
-        content: '';
-        display: block;
-        width: 200px;
-        border-top: 1px solid #2dc7d0;
-        margin: 15px auto;
+    .container {
+        width: 90%;
     }
-    
-    .paragrafo {
-        line-height: 2rem;
-    }
-    /* Sobre */
-    
-    .sobre {
-        background-image: url('../img/textura1.png');
-    }
-    
-    .sobre p {
-        line-height: 1.8rem;
-        text-align: justify;
-    }
-    
-    .sobre .missao-visao-valores {
-        padding: 20px 0;
-        margin-top: 35px;
-        margin-bottom: 0px;
-    }
-    
-    .sobre .missao-visao-valores .icon {
-        color: #fff;
-    }
-    
-    .sobre .missao-visao-valores h3 {
-        font-size: 1.5rem;
-        color: #fff;
-        text-transform: uppercase;
-    }
-    
-    .sobre .missao-visao-valores p {
-        color: #212121;
-        text-align: center;
-    }
-    /* Serviços */
-    
-    .servicos {
-        background-image: url('../img/textura2.png');
-    }
-    
-    .servicos .btn-horario {
-        padding-bottom: 20px;
-    }
-    
-    .semBordaInferior {
-        margin-bottom: 0;
-    }
-    /* Unidades */
-    
-    .unidades {
-        background-image: url('../img/bg-unidades.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-    
-    .unidades article p {
-        line-height: 1.8rem;
-    }
-    /* Contato */
-    
-    .contato {
-        background-image: url(../img/textura1.png);
-    }
-    
-    .contato .mapa {
-        min-height: 560px;
-    }
-    
-    .contato .mapa iframe {
-        width: 100%;
-        min-height: 560px;
-        border: none;
-    }
-    
-    .contato .informacoes {
-        background-image: url('../img/textura2.png');
-        min-height: 560px;
-        padding: 30px;
-    }
-    
-    .contato h4 {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        font-weight: 900;
-    }
-    
-    .contato .formulario {
-        min-height: 500px;
-        padding: 30px;
-    }
-    /* Depoimentos */
-    
-    .depoimentos .titulo::after {
-        border-color: #fff;
-    }
-    
-    .depoimentos img {
-        width: 100px
-    }
-    
-    .depoimentos h4 {
-        font-size: 1.2rem;
-        font-weight: 900;
-    }
-    /* Rodapé */
-    
-    .rodape {
-        background-image: url("../img/bg-rodape.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 30px o;
-    }
-    /* Custom */
-    
-    nav.nav-extended .nav-wrapper {
-        min-height: 94px;
-    }
-    
-    .navbar-fixed {
-        position: absolute;
-        height: 94px;
-    }
-    
-    nav,
-    nav i,
-    nav [class^="mdi-"],
-    nav [class*="mdi-"],
-    nav i.material-icons,
-    nav a.buttom-collapse i {
-        height: 94px;
-        line-height: 94px;
-    }
-    
-    .sidenav {
-        background: url(../img/textura2.png);
-    }
-    
-    .sidenav li>a {
-        color: #fff;
-        font-weight: 300;
-    }
-    
-    .tabs {
-        background-color: #212121;
-    }
-    
-    .tabs .tab a {
-        color: #fff;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 0 24px;
-        font-size: 14px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        -webkit-transition: color .28s ease, background-color .28s ease;
-        transition: color .28s ease, background-color .28s ease;
-    }
-    
-    .tabs .tab a:hover,
-    .tabs .tab a.active {
-        background-color: transparent;
-        color: #2dc7d0;
-    }
-    
-    .tabs .indicator {
-        background-color: #2dc7d0;
-    }
-    /*Media*/
-    
-    @media only screen and (max-width: 480px) {}
-    
-    @media only screen and (max-width: 601px) {
-        .banner {
-            padding-top: 4.5rem;
-        }
-        .banner h2 {
-            font-size: 4rem;
-        }
-        .container {
-            width: 85%;
-        }
-    }
-    
-    @media only screen and (min-width: 993px) {
-        .banner {
-            padding-top: 5rem;
-        }
-        .banner h2 {
-            font-size: 5rem;
-        }
-        .container {
-            width: 90%;
-        }
-    }
+}

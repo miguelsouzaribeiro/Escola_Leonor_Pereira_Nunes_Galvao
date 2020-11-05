@@ -1,3 +1,2 @@
-# **Projeto Escola EMEF Prof Leonor Pereira Nunes Galvão**
+# Site para Carolina Facciolla
 
-* **Todos direitos reservados para EMEF Prof Leonor Pereira Nunes Galvão**
