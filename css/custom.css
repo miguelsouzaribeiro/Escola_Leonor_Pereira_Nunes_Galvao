@@ -61,6 +61,11 @@ body {
     background: linear-gradient(135deg, #0077ff 0%, #00418B 100%);
 }
 
+.home .azul-logo-text {
+    color: #00418B;
+    font-size: 1.0rem;
+}
+
 .banner h2 {
     font-size: 2.5rem;
     font-weight: 900;
@@ -170,6 +175,7 @@ body {
 
 .contato .azul-logo-text {
     color: #00418B;
+    font-size: 1.0rem;
 }
 
 .contato .mapa iframe {
@@ -247,7 +253,7 @@ nav a.buttom-collapse i {
 }
 
 .tabs {
-    background-color: #212121;
+    background-color: #00418B;
 }
 
 .tabs .tab a {
