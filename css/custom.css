@@ -110,23 +110,23 @@ body {
     text-align: justify;
 }
 
-.sobre .missao-visao-valores {
+.sobre .valores {
     padding: 20px 0;
     margin-top: 35px;
     margin-bottom: 0px;
 }
 
-.sobre .missao-visao-valores .icon {
+.sobre .valores .icon {
     color: #fff;
 }
 
-.sobre .missao-visao-valores h3 {
+.sobre .valores h3 {
     font-size: 1.5rem;
     color: #fff;
     text-transform: uppercase;
 }
 
-.sobre .missao-visao-valores p {
+.sobre .valores p {
     color: #212121;
     text-align: center;
 }
@@ -163,49 +163,49 @@ body {
 }
 
 
-/* Contato */
+/* Contatos */
 
-.contato {
+.contatos {
     background-image: url(../img/textura.png);
 }
 
-.contato .mapa {
+.contatos .mapa {
     min-height: 500px;
 }
 
-.contato .azul-logo-text {
+.contatos .azul-logo-text {
     color: #00418B;
     font-size: 1.0rem;
 }
 
-.contato .mapa iframe {
+.contatos .mapa iframe {
     width: 100%;
     min-height: 500px;
     border: none;
 }
 
-.contato .informacoes {
+.contatos .informacoes {
     background-color: #FFBB00;
     min-height: 500px;
     padding: 30px;
 }
 
-.contato h4 {
+.contatos h4 {
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 900;
     color: #00418B;
 }
 
-.contato .formulario {
+.contatos .formulario {
     height: 500px;
     padding: 30px;
 }
 
 
-/* Margrm no Contato */
+/* Margrm no Contatos */
 
-.margemContato {
+.margemContatos {
     padding: 24px;
 }
 
