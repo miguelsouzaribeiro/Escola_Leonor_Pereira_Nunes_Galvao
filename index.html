@@ -27,6 +27,21 @@
 </head>
 
 <body>
+
+    <div id="seriesXXXX">
+<ul>
+    <li v-for="serie in series">
+        {{serie.nome}}
+        <ul>
+            <li v-for="materia in serie.materias">
+                {{materia.materia}}
+            </li>
+        </ul>
+    </li>
+</ul>
+
+    </div>
+
     <header>
         <!--Menu Mobile-->
         <ul class="sidenav" id="menu-mobile">
@@ -115,10 +130,10 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum soluta quibusdam consequatur. Odio magnam saepe minima, amet qui quibusdam quasi recusandae quidem ipsum ut quos et placeat minus architecto?
                 </p>
             </div>
-            <div class="col s12 l3 right"  id="banners-col">
-                <div class="carousel carousel-slider hoverable" v-for="banner in banners" :key="banner.id" data-indicators="true">
+            <div class="col s12 l3 right">
+                <div class="carousel carousel-slider hoverable"data-indicators="true">
                     <a href="#" class="carousel-item">
-                        <img src="{{banner.imagem}}" alt="{{banner.descricao}}">
+                        <img src="img/Banner01.jpeg" alt="Imagem intitucional">
                     </a>
                     <a href="#" class="carousel-item">
                         <img src="img/Banner02.jpeg" alt="Imagem intitucional">
@@ -154,6 +169,8 @@
             </div>
         </div>
         <div class="row container semBordaInferior">
+           
+           
             <!-- 1°Ano -->
             <div class="semBordaInferior">
                 <article class="col s12 m6 l3">
@@ -178,43 +195,16 @@
                 </article>
                 <!-- Modal: 1°Ano -->
                 <div class="modal" id="1Ano-modal">
-                    <div class="modal-content">
+                    <div class="modal-content"  v-for="ano1 in serie1" :key="serie1.id">
                         <h5 class="light">
                             Atividades dessa semana:
                         </h5>
                         <p class="light azul-logo-text">
                             1°A
                         </p>
-                        <ul class="collection">
+                        <ul class="collection" id="ano1">
                             <li class="collection-item">
-                                <a href="">Português</a>
-                            </li>
-                            <li class="collection-item">
-                                <a href="">Matemática</a>
-                            </li>
-                            <li class="collection-item">
-                                <a href="">Ciências</a>
-                            </li>
-                            <li class="collection-item">
-                                <a href="">História</a>
-                            </li>
-                            <li class="collection-item">
-                                <a href="">Geografia</a>
-                            </li>
-                            <li class="collection-item">
-                                <a href="">Inglês</a>
-                            </li>
-                            <li class="collection-item">
-                                <a href="">Arte</a>
-                            </li>
-                            <li class="collection-item">
-                                <a href="">Educação Fisíca</a>
-                            </li>
-                            <li class="collection-item">
-                                <a href="">Enriquecimento Curricular</a>
-                            </li>
-                            <li class="collection-item">
-                                <a href="">Sala de Leitura</a>
+                                <a>{{serie1.materia}}</a>
                             </li>
                         </ul>
 
@@ -299,6 +289,11 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+
 
             <!-- 2°Ano -->
             <div class="semBordaInferior">
