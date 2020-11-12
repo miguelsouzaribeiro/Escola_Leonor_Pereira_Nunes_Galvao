@@ -22,27 +22,13 @@
     <title>
         Escola Leonor Pereira Nunes Galvão
     </title>
-<!--    <link rel="icon" href="img/fav.png">-->
+    <!--    <link rel="icon" href="img/fav.png">-->
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
 
-    <!--
-<div id="seriesXXXX">
-    <ul>
-        <li v-for="serie in ano1">
-            {{serie.nome}}
-            <ul>
-                <li v-for="materia in serie.materias">
-                    {{materia.materia}}
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
--->
     <!-- NavBar -->
     <header>
         <!--Menu Mobile-->
@@ -111,19 +97,15 @@
             </div>
             <div id="carrosel"></div>
         </div>
-
-
         <div id="valores" class="row azul-logo valores white-text">
             <div v-for="valor in valores" :key="valor.id" class="container center">
                 <article class="item col s12 m4">
-                    <span class="icon"> <i class="material-icons medium">{{valor.icone}}</i>
-                    </span>
+                    <span class="icon"><i class="material-icons medium">{{valor.icone}}</i></span>
                     <h3 class="light">{{ valor.titulo }}</h3>
                     <p class="light left white-text">{{valor.corpo}}</p>
                 </article>
             </div>
         </div>
-
         </div>
     </section>
 
@@ -137,10 +119,6 @@
             </div>
         </div>
         <div class="row container semBordaInferior">
-
-
-
-
             <!-- 1°Ano -->
             <div id="ano1"></div>
 
@@ -179,7 +157,6 @@
 
             <!-- Quadros de Horarios -->
             <div id="horario"></div>
-
 
         </div>
     </section>
@@ -220,7 +197,7 @@
 
 
     <!-- Contatos -->
-    <section class="contatos bloco scrollSpy" id="contatos">
+    <section class="contatos bloco scrollSpy">
         <div class="margemContatos">
             <div class="row container">
                 <div class="col s12 center">
@@ -238,14 +215,13 @@
                     </div>
                 </div>
 
-                <div class="col s12 m6 l4">
-                    <div class="informacoes white-text">
+                <div class="col s12 m6 l4" id="contatos">
+                    <div class="informacoes white-text" v-for="contatos in contatos" :key="contatos.id">
                         <h4>
-                            Redes sociais
+                            {{contatos.redessociais}}
                         </h4>
                         <p class="light azul-logo-text left-align">
-                            Fique por dentro das novidades, receba dicas, ou simplesmente mostre ao mundo que você faz
-                            parte desse projeto sensacional!
+                            {{contatos.redesocialcorpo}}
                         </p>
                         <a href="https://pt-br.facebook.com/pages/Escola-Leonor-Pereira-Nunes-Galvao/153492411470308"
                             class="btn-floating azul-logo"><i class="fa fa-facebook"></i></a>
@@ -253,37 +229,37 @@
                             class="btn-floating azul-logo"><i class="fa fa-whatsapp"></i></a>
                         <a href="" class="btn-floating azul-logo"><i class="fa fa-instagram"></i></a>
                         <h4>
-                            Contatos
+                            {{contatos.endereco}}
                         </h4>
                         <p class="light azul-logo-text left-align">
-                            R. José Molina, 150 - Vila Industrial, São José dos Campos - SP, 12220-300
+                            {{contatos.enderecocorpo}}
                         </p>
                         <h4>
-                            Contatos
+                            {{contatos.contato}}
                         </h4>
                         <p class="azul-logo-text">
-                            (12) 3929-1714
+                            {{contatos.contatocorpo}}
                         </p>
                     </div>
                 </div>
 
-                <div class="col s12 m6 l4">
-                    <div class="formulario white white-text">
+                <div class="col s12 m6 l4" id="faleconosco">
+                    <div class="formulario white white-text" v-for="faleconosco in faleconosco" :key="faleconosco.id">
                         <h4>
-                            Fale conosco
+                            {{faleconosco.titulo}}
                         </h4>
                         <p class="light azul-logo-text left-align">
-                            Dúvidas, criticas ou sujestões? Entre em Contatos conosco, seu feedback é muito importante.
+                            {{faleconosco.corpo}}
                         </p>
                         <form action="https://airform.io/miguelsouzaribeiro@gmail.com" method="post">
                             <div class="input-field">
-                                <input type="text" name="nome" placeholder="Seu nome">
+                                <input type="text" name="nome" placeholder="Nome">
                             </div>
                             <div class="input-field">
                                 <input type="text" name="assunto" placeholder="Assunto">
                             </div>
                             <div class="input-field">
-                                <textarea name="mensagem" placeholder="Sua mensagem"
+                                <textarea name="mensagem" placeholder="Mensangem"
                                     class="materialize-textarea"></textarea>
                             </div>
                             <button class="btn azul-logo">Enviar</button>
@@ -295,13 +271,12 @@
     </section>
 
 
-
     <!-- Rodapé -->
-    <footer class="rodape">
-        <div class="row container center semBordaInferior">
+    <footer class="rodape" id="direitos">
+        <div class="row container center semBordaInferior" v-for="direitos in direitos" :key="direitos.id">
             <img src="img/logo.png" class="logo_img" alt="Logo Leonor">
             <p class="light white-text">
-                © Miguel de Souza Ribeiro 2020 - Todos os direitos reservados
+                {{direitos.direitos}}
             </p>
         </div>
     </footer>
@@ -319,3 +294,16 @@
 </body>
 
 </html>
+<!--
+    <div id="seriesXXXX">
+        <ul>
+            <li v-for="serie in ano1">{{serie.nome}}
+                <ul>
+                    <li v-for="materia in serie.materias">
+                        {{materia.materia}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+-->

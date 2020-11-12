@@ -19,7 +19,7 @@ $(document).ready(function () {
         el: '#banners',
         data: {
             banners: [
-                { titulo: "Sobre o Leonor", corpo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum soluta quibusdam consequatur.Odio magnam saepe minima, amet qui quibusdam quasi recusandae quidem ipsum ut quos et placeat minus architecto?" },
+                { titulo: "Sobre o Leonor", corpo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum soluta quibusdam consequatur.Odio magnam saepe minima, amet qui quibusdam quasi recusandae quidem ipsum ut quos et placeat minus architecto?" }
             ]
         }
     });
@@ -28,12 +28,37 @@ $(document).ready(function () {
         el: '#recados',
         data: {
             recados: [
-                { titulo: "Recados", corpo: "Primeiro recado(um exemplo)" },
+                { titulo: "Recados", corpo: "Primeiro recado(um exemplo)" }
             ]
         }
     });
 
+    var contatos = new Vue({
+        el: '#contatos',
+        data: {
+            contatos: [
+                { titulo: "Contatos", redessociais: "Redes sociais", redesocialcorpo: "Fique por dentro das novidades, receba dicas, ou simplesmente mostre ao mundo que você faz parte dessa escola sensacional!", endereco: "Endereço", enderecocorpo: "R. José Molina, 150 - Vila Industrial, São José dos Campos - SP, 12220-300", contato: "Contato", contatocorpo: "(12) 3929-1714" }
+            ]
+        }
+    });
 
+    var faleconosco = new Vue({
+        el: '#faleconosco',
+        data: {
+            faleconosco: [
+                { titulo: "Fale Conosco", corpo: "Dúvidas, criticas ou sujestões? Entre em Contatos conosco, seu feedback é muito importante." }
+            ]
+        }
+    });
+
+    var direitos = new Vue({
+        el: '#direitos',
+        data: {
+            direitos: [
+                { direitos: "© Miguel de Souza Ribeiro 2020 - Todos os direitos reservados" }
+            ]
+        }
+    });
 
     new Vue({
         el: '#ano1',
@@ -2183,64 +2208,64 @@ $(document).ready(function () {
         `
     })
 
-/*    
-
-    var ano1A = {
-        nome: "1°Ano A",
-        materias: [
-            { id: "2", materia: "Português", link: "http://xxxx" },
-            { id: "3", materia: "Matemática", link: "http://xxxx" },
-            { id: "4", materia: "Ciências", link: "http://xxxx" },
-            { id: "5", materia: "História", link: "http://xxxx" },
-            { id: "6", materia: "Geografia", link: "http://xxxx" },
-            { id: "7", materia: "Inglês", link: "http://xxxx" },
-            { id: "8", materia: "Arte", link: "http://xxxx" },
-            { id: "9", materia: "Educação Fisíca", link: "http://xxxx" },
-            { id: "10", materia: "Enriquecimento Curricular", link: "http://xxxx" }
-        ]
-    };
-
-    var ano1B = {
-        nome: "1°Ano B",
-        materias: [
-            { id: "2", materia: "Português", link: "http://xxxx" },
-            { id: "3", materia: "Matemática", link: "http://xxxx" },
-            { id: "4", materia: "Ciências", link: "http://xxxx" },
-            { id: "5", materia: "História", link: "http://xxxx" },
-            { id: "6", materia: "Geografia", link: "http://xxxx" },
-            { id: "7", materia: "Inglês", link: "http://xxxx" },
-            { id: "8", materia: "Arte", link: "http://xxxx" },
-            { id: "9", materia: "Educação Fisíca", link: "http://xxxx" },
-            { id: "10", materia: "Enriquecimento Curricular", link: "http://xxxx" }
-        ]
-    };
-
-    var ano1C = {
-        nome: "1°Ano C",
-        materias: [
-            { id: "2", materia: "Português", link: "http://xxxx" },
-            { id: "3", materia: "Matemática", link: "http://xxxx" },
-            { id: "4", materia: "Ciências", link: "http://xxxx" },
-            { id: "5", materia: "História", link: "http://xxxx" },
-            { id: "6", materia: "Geografia", link: "http://xxxx" },
-            { id: "7", materia: "Inglês", link: "http://xxxx" },
-            { id: "8", materia: "Arte", link: "http://xxxx" },
-            { id: "9", materia: "Educação Fisíca", link: "http://xxxx" },
-            { id: "10", materia: "Enriquecimento Curricular", link: "http://xxxx" }
-        ]
-    };
-
-    var series = new Vue({
-        el: '#seriesXXXX',
-        data: {
-            ano1: [
-                ano1A,
-                ano1B,
-                ano1C
+    /*    
+    
+        var ano1A = {
+            nome: "1°Ano A",
+            materias: [
+                { id: "2", materia: "Português", link: "http://xxxx" },
+                { id: "3", materia: "Matemática", link: "http://xxxx" },
+                { id: "4", materia: "Ciências", link: "http://xxxx" },
+                { id: "5", materia: "História", link: "http://xxxx" },
+                { id: "6", materia: "Geografia", link: "http://xxxx" },
+                { id: "7", materia: "Inglês", link: "http://xxxx" },
+                { id: "8", materia: "Arte", link: "http://xxxx" },
+                { id: "9", materia: "Educação Fisíca", link: "http://xxxx" },
+                { id: "10", materia: "Enriquecimento Curricular", link: "http://xxxx" }
             ]
-        }
-    })
-*/
+        };
+    
+        var ano1B = {
+            nome: "1°Ano B",
+            materias: [
+                { id: "2", materia: "Português", link: "http://xxxx" },
+                { id: "3", materia: "Matemática", link: "http://xxxx" },
+                { id: "4", materia: "Ciências", link: "http://xxxx" },
+                { id: "5", materia: "História", link: "http://xxxx" },
+                { id: "6", materia: "Geografia", link: "http://xxxx" },
+                { id: "7", materia: "Inglês", link: "http://xxxx" },
+                { id: "8", materia: "Arte", link: "http://xxxx" },
+                { id: "9", materia: "Educação Fisíca", link: "http://xxxx" },
+                { id: "10", materia: "Enriquecimento Curricular", link: "http://xxxx" }
+            ]
+        };
+    
+        var ano1C = {
+            nome: "1°Ano C",
+            materias: [
+                { id: "2", materia: "Português", link: "http://xxxx" },
+                { id: "3", materia: "Matemática", link: "http://xxxx" },
+                { id: "4", materia: "Ciências", link: "http://xxxx" },
+                { id: "5", materia: "História", link: "http://xxxx" },
+                { id: "6", materia: "Geografia", link: "http://xxxx" },
+                { id: "7", materia: "Inglês", link: "http://xxxx" },
+                { id: "8", materia: "Arte", link: "http://xxxx" },
+                { id: "9", materia: "Educação Fisíca", link: "http://xxxx" },
+                { id: "10", materia: "Enriquecimento Curricular", link: "http://xxxx" }
+            ]
+        };
+    
+        var series = new Vue({
+            el: '#seriesXXXX',
+            data: {
+                ano1: [
+                    ano1A,
+                    ano1B,
+                    ano1C
+                ]
+            }
+        })
+    */
     // Menu Mobile
     $(".sidenav").sidenav();
     // Link Interno
