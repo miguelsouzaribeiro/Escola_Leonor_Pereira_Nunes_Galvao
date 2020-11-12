@@ -15,7 +15,23 @@ $(document).ready(function () {
     });
 
 
+    var banners = new Vue({
+        el: '#banners',
+        data: {
+            banners: [
+                { titulo: "Sobre o Leonor", corpo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum soluta quibusdam consequatur.Odio magnam saepe minima, amet qui quibusdam quasi recusandae quidem ipsum ut quos et placeat minus architecto?" },
+            ]
+        }
+    });
 
+    var recados = new Vue({
+        el: '#recados',
+        data: {
+            recados: [
+                { titulo: "Recados", corpo: "Primeiro recado(um exemplo)" },
+            ]
+        }
+    });
 
 
 
@@ -2117,6 +2133,55 @@ $(document).ready(function () {
     })
 
 
+    new Vue({
+        el: '#carrosel',
+        template: `
+        <div class="col s12 l3 right">
+        <div class="carousel carousel-slider hoverable" data-indicators="true">
+            <a href="#" class="carousel-item">
+                <img src="img/Banner01.jpeg" alt="Imagem intitucional">
+            </a>
+            <a href="#" class="carousel-item">
+                <img src="img/Banner02.jpeg" alt="Imagem intitucional">
+            </a>
+            <a href="#" class="carousel-item">
+                <img src="img/Banner03.jpeg" alt="Imagem intitucional">
+            </a>
+        </div>
+    </div>
+        `
+    })
+
+
+
+    new Vue({
+        el: '#home',
+        template: `
+        <!-- Home -->
+        <section class="home bloco scrollSpy" id="home">
+            <div class="row container semBordaInferior">
+                <div class="col s12 center">
+                    <h2 class="white-text titulo">
+                        Portal Leonor
+                    </h2>
+                    <p class="white-text light">
+                        Portal oficial do Leonor
+                    </p>
+                    <div class="row botoes">
+                        <a href="#sobre" class="btn btn-large white
+                                hoverable azul-logo-text">
+                            Sobre nós
+                        </a>
+                        <a href="#contatos" class="btn btn-large white hoverable
+                                azul-logo-text">
+                            Contatos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        `
+    })
 
 /*    
 

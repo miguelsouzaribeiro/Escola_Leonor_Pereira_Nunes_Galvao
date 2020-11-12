@@ -11,7 +11,8 @@
 <head>
     <meta charset="utf-8">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Import Google Icon Font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
@@ -28,7 +29,7 @@
 
 <body>
 
-<!--
+    <!--
 <div id="seriesXXXX">
     <ul>
         <li v-for="serie in ano1">
@@ -42,6 +43,7 @@
     </ul>
 </div>
 -->
+    <!-- NavBar -->
     <header>
         <!--Menu Mobile-->
         <ul class="sidenav" id="menu-mobile">
@@ -96,56 +98,20 @@
     </header>
 
     <!-- Home -->
-    <section class="home bloco scrollSpy" id="home">
-        <div class="row container semBordaInferior">
-            <div class="col s12 center">
-                <h2 class="white-text titulo">
-                    Portal Leonor
-                </h2>
-                <p class="white-text light">
-                    Portal oficial do Leonor
-                </p>
-                <div class="row botoes">
-                    <a href="#sobre" class="btn btn-large white
-                            hoverable azul-logo-text">
-                        Sobre nós
-                    </a>
-                    <a href="#contatos" class="btn btn-large white hoverable
-                            azul-logo-text">
-                        Contatos
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id=""></div>
 
     <!-- Sobre -->
-    <section class="sobre bloco scrollSpy center" id="sobre">
-        <div class="row container">
+    <section class="sobre bloco scrollSpy center" id="banners">
+        <div class="row container" v-for="banners in banners" :key="banners.id">
             <div class="col s12">
-                <h2 class="light titulo">Sobre o Leonor</h2>
+                <h2 class="light titulo">{{ banners.titulo }}</h2>
             </div>
             <div class="col s12 l6">
-                <p class="light texto-justificado paragrafo left left-align">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum soluta quibusdam consequatur.
-                    Odio magnam saepe minima, amet qui quibusdam quasi recusandae quidem ipsum ut quos et placeat minus
-                    architecto?
-                </p>
+                <p class="light texto-justificado paragrafo left left-align">{{ banners.corpo }}</p>
             </div>
-            <div class="col s12 l3 right">
-                <div class="carousel carousel-slider hoverable" data-indicators="true">
-                    <a href="#" class="carousel-item">
-                        <img src="img/Banner01.jpeg" alt="Imagem intitucional">
-                    </a>
-                    <a href="#" class="carousel-item">
-                        <img src="img/Banner02.jpeg" alt="Imagem intitucional">
-                    </a>
-                    <a href="#" class="carousel-item">
-                        <img src="img/Banner03.jpeg" alt="Imagem intitucional">
-                    </a>
-                </div>
-            </div>
+            <div id="carrosel"></div>
         </div>
+
 
         <div id="valores" class="row azul-logo valores white-text">
             <div v-for="valor in valores" :key="valor.id" class="container center">
@@ -234,18 +200,15 @@
 
         <div class="row container semBordaInferior">
             <!-- Recados -->
-            <article class="s12 l6">
-                <div class="card horizontal">
+            <article class="s12 l6" id="recados">
+                <div class="card horizontal" v-for="recados in recados" :key="recados.id">
                     <div class="card-image card-image-horizontal">
                         <img src="img/Leonor.png" alt="Recado Texto">
                     </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <h3 class="card-title light">
-                            </h3>
-                            <p class="light azul-logo-text paragrafo left-align">
-                                Primeiro recado(um exemplo)
-                            </p>
+                            <h3 class="card-title light">{{ recados.titulo }}</h3>
+                            <p class="light azul-logo-text paragrafo left-align">{{ recados.corpo }}</p>
                         </div>
                     </div>
                 </div>
@@ -267,7 +230,10 @@
                 </div>
                 <div class="col s12 m6 l4 hide-on-med-only hide-on-small-only">
                     <div class="mapa transparent">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d771.0473409326049!2d-45.85928091517232!3d-23.179690009317326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4b321cedd4b1%3A0xcfb86ba7f3c7c89a!2sEMEF%20Profa.%20Leonor%20Pereira%20Nunes%20Galv%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1604511208601!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d771.0473409326049!2d-45.85928091517232!3d-23.179690009317326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4b321cedd4b1%3A0xcfb86ba7f3c7c89a!2sEMEF%20Profa.%20Leonor%20Pereira%20Nunes%20Galv%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1604511208601!5m2!1spt-BR!2sbr"
+                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
                         </iframe>
                     </div>
                 </div>
@@ -281,8 +247,10 @@
                             Fique por dentro das novidades, receba dicas, ou simplesmente mostre ao mundo que você faz
                             parte desse projeto sensacional!
                         </p>
-                        <a href="https://pt-br.facebook.com/pages/Escola-Leonor-Pereira-Nunes-Galvao/153492411470308" class="btn-floating azul-logo"><i class="fa fa-facebook"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=555512983109081&text=Gostaria+de+falar+com" class="btn-floating azul-logo"><i class="fa fa-whatsapp"></i></a>
+                        <a href="https://pt-br.facebook.com/pages/Escola-Leonor-Pereira-Nunes-Galvao/153492411470308"
+                            class="btn-floating azul-logo"><i class="fa fa-facebook"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=555512983109081&text=Gostaria+de+falar+com"
+                            class="btn-floating azul-logo"><i class="fa fa-whatsapp"></i></a>
                         <a href="" class="btn-floating azul-logo"><i class="fa fa-instagram"></i></a>
                         <h4>
                             Contatos
@@ -315,7 +283,8 @@
                                 <input type="text" name="assunto" placeholder="Assunto">
                             </div>
                             <div class="input-field">
-                                <textarea name="mensagem" placeholder="Sua mensagem" class="materialize-textarea"></textarea>
+                                <textarea name="mensagem" placeholder="Sua mensagem"
+                                    class="materialize-textarea"></textarea>
                             </div>
                             <button class="btn azul-logo">Enviar</button>
                         </form>
@@ -340,7 +309,9 @@
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Um script para ajustar altura -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js" integrity="sha512-/bOVV1DV1AQXcypckRwsR9ThoCj7FqTV2/0Bm79bL3YSyLkVideFLE3MIZkq1u5t28ke1c0n31WYCOrO01dsUg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"
+        integrity="sha512-/bOVV1DV1AQXcypckRwsR9ThoCj7FqTV2/0Bm79bL3YSyLkVideFLE3MIZkq1u5t28ke1c0n31WYCOrO01dsUg=="
+        crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="ScriptSiteDaEscola.js"></script>
